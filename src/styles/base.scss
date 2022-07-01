@@ -1,0 +1,15 @@
+@mixin mobile {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+:root {
+  --primary: #174dba;
+  --gray: #eff0f3;
+  --white: #ffffff;
+  --dark: #505050;
+  --size-input: 2.15rem;
+  --size-border: 0.4rem;
+}
+

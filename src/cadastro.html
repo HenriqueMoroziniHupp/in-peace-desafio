@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UpperSoft - Cadastro</title>
+  
+</head>
+
+
+<body>
+  <div id="app">
+
+    <header class="header">
+      <img class="logo" src="assets/logo-uppersoft.svg" alt="UpperSoft Logo">
+    </header>
+
+    <main class="container">
+
+      <!-- <div class=""></div> -->
+      <form class="cadastro">
+
+        <h2 class="title">Cadastro</h2>
+        <div class="inputs">
+
+          <div class="content-cadastro">
+            <p class="input-description">Nome completo</p>
+            <input id="full-name" class="input-cadastro" type="text">
+          </div>
+
+
+          <div class="content-cadastro">
+            <p class="input-description">E-mail</p>
+            <input id="mail" class="input-cadastro" type="email">
+          </div>
+
+          <div class="content-cadastro">
+            <p class="input-description">Estado</p>
+            <select id="uf" class="input-cadastro">
+              <option value="" data-default disabled selected></option>
+              <option value="ES">Espírito Santo</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="SP">São Paulo</option>
+            </select>
+          </div>
+
+
+          <div class="content-cadastro radio">
+            <p class="input-description">Sexo</p>
+            <div class="input-cadastro radio radio-inputs">
+              <input type="radio" name="genero" value="M" /> <small>Masculino</small>
+              <input type="radio" name="genero" value="F" /> <small>Feminino</small>
+              <input type="radio" name="genero" value="Outro" /> <small>Outro</small>
+            </div>
+
+          </div>
+
+          <div class="content-cadastro">
+            <p class="input-description">Senha</p>
+            <input id="password1" class="input-cadastro" type="password" minlength="3">
+            <small class="password-info">A senha deve ter no mínimo 6 caracteres</small>
+          </div>
+
+          <div class="content-cadastro">
+            <p class="input-description">Confirmar senha</p>
+            <input id="password2" class="input-cadastro" type="password" minlength="3">
+          </div>
+
+
+        </div>
+
+        <button class="cadastro-button">CADASTRAR</button>
+        <p class="login-account">Já possui conta? <a href="./index.html">Entre aqui</a></p>
+
+
+      </form>
+    </main>
+
+
+
+  </div>
+  <script type="module" src="./js/cadastro.js"></script>
+</body>
+
+</html>

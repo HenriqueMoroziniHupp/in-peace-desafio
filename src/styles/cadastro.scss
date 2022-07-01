@@ -1,0 +1,155 @@
+@import url('/styles/base.scss');
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary);
+  height: 100vh;
+  background-color: var(--gray);
+}
+
+#app {
+  height: 100vh;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    height: 3.75rem;
+    background-color: var(--primary);
+    place-items: center;
+    .logo {
+      height: 69%;
+    }
+  }
+
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1.5rem;
+
+    .cadastro {
+      display: grid;
+      padding: 0 3rem;
+      justify-items: center;
+      background-color: var(--white);
+      border-radius: var(--size-border);
+
+      .title {
+        font-size: 22px;
+        padding-bottom: 0.6rem;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .inputs {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 240px 240px;
+        grid-template-rows: repeat(3, max-content);
+        text-align: start;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        gap: 1.5rem;
+
+        .input-cadastro {
+          background-color: var(--white);
+          width: 100%;
+          border: solid 1px var(--primary);
+          border-radius: 0.4rem;
+          height: var(--size-input);
+          padding: 0;
+        }
+
+        .radio {
+          border: none;
+        }
+
+        .radio-inputs {
+          display: grid;
+          grid-auto-flow: column;
+          place-items: center;
+          gap: 0.3rem;
+        }
+
+        .password-info {
+          color: var(--dark);
+        }
+      }
+
+      .cadastro-button {
+        width: 100%;
+        height: var(--size-input);
+        color: var(--white);
+        background-color: var(--primary);
+        border: none;
+        border-radius: var(--size-border);
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .login-account {
+        color: var(--dark);
+        padding: 1rem 0 3rem 0;
+        a {
+          text-decoration: none;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+@media (max-height: 600px) {
+  #app {
+    .container {
+      align-content: stretch;
+      .cadastro {
+        margin: 5rem 0;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #app {
+    .container {
+      align-content: stretch;
+      .cadastro {
+        margin: 5rem 0;
+        padding: 0 2rem;
+        .inputs {
+          grid-template-columns: 200px 200px;
+          .password-info {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #app {
+    .header {
+      height: 3rem;
+    }
+    .container {
+      .cadastro {
+        padding: 0 1.5rem;
+        .inputs {
+          grid-template-columns: 220px;
+          grid-template-rows: repeat(6, max-content);
+        }
+      }
+    }
+  }
+}
