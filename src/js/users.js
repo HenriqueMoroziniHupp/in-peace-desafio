@@ -11,63 +11,47 @@ axios.get('https://reqres.in/api/users?page=1').then(function (response) {
   console.log(response.data.data)
 
   response.data.data.forEach((element) => {
-    // console.log(element.first_name)
 
-    // let newUserBox = document.createElement('div')
-
-    let user = (document.innerHTML = `
-      <div class="user-box">
-      <span>
-        <button class="button-edit">
-          <img class="edit" src="./assets/icon-edit.svg" alt="Editar">
-        </button>
-        
-        <img class="profile" src="${element.avatar}"
-          alt="Usuários">
-                                      
-        <h2 class="name">${element.first_name}</h2>
-        <p class="email">${element.email}</p>
-
-      </span>
-    </div>
-`)
-
-
-
-    let boxUser
     let div = document.createElement('div')
     div.setAttribute('class', 'user-box')
-    // div.appendChild(user)
-    // console.log(div)
-
-
+    
+    
+    let span = document.createElement('span')
+    div.appendChild(span)
+    
+    // create <button></button>
     let button = document.createElement('button')
     button.setAttribute('class', 'button-edit')
 
+    // create button image
     let img = document.createElement('img')
-    img.setAttribute('class','edit')
-    img.setAttribute('src','./assets/icon-edit.svg')
+    img.setAttribute('class', 'edit')
+    img.setAttribute('src', './assets/icon-edit.svg')
+    img.setAttribute('alt', 'editar')
     button.appendChild(img)
 
+    // create profile image
     let img2 = document.createElement('img')
-    img2.setAttribute('class','profile')
-    img2.setAttribute('src',`${element.avatar}`)
+    img2.setAttribute('class', 'profile')
+    img2.setAttribute('src', `${element.avatar}`)
 
-
-
-
-
+    // create <h2></h2> with name person
     let h2 = document.createElement('h2')
     h2.setAttribute('class', 'name')
+    let firstName = document.createTextNode(`${element.first_name}`)
+    h2.appendChild(firstName)
 
+    // create <p></p> with mail person
+    let p = document.createElement('p')
+    p.setAttribute('class', 'email')
+    let email = document.createTextNode(`${element.email}`)
+    p.appendChild(email)
 
-    div.appendChild(button)
-    div.appendChild(img2)
+    span.appendChild(button)
+    span.appendChild(img2)
+    span.appendChild(h2)
+    span.appendChild(p)
 
-    // div.innerHTML += user
-    // console.log(user)
-
-    // userContainer.appendChild(user)
-    console.log(div)
+    userContainer.appendChild(div)
   })
 })
