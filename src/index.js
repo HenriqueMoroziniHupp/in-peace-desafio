@@ -1,13 +1,7 @@
 import './index.scss'
-// import './cadastro.scss'
-// import './users.scss'
 
 import 'normalize.css'
 
-// document.querySelector('#app').innerHTML = `
-//   <h1>Hello Vite!</h1>
-//   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-// `
 
 let buttonLogin = document.querySelector('#app .login-button')
 
