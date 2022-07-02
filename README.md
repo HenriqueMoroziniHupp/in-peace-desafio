@@ -1,6 +1,7 @@
 # Desafio [InPeace](https://inpeaceapp.com/) >>> Front-end
 
 Branch [main](https://github.com/HenriqueMoroziniHupp/in-peace-desafio) - Entregue dentro do prazo
+
 Branch [after-the-deadline](https://github.com/HenriqueMoroziniHupp/in-peace-desafio/tree/after-the-deadline) - Entregue após o prazo, implementação do Axios e manipulação da DOM com dados carregados via API [Reqres](https://reqres.in/)
 
 Desafio composto de três páginas `.html` cujo objetivo é simular um sistema de gerênciamento de usuários
@@ -23,14 +24,14 @@ Para desenvolvimento do desafios, foram utilizadas as seguintes tecnologias:
 
 # Como rodar o projeto
 
-Siga os comandos para visualiar o projeto
+Siga os comandos para visualizar o projeto
 ## Instale as dependencias:
 
 ```sh
 npm install
 ```
 
-## Compile e abra em modo de desenvolvimento:
+## Compile e abra em modo de desenvolvimento (localhost):
 
 ```sh
 npm run dev
@@ -44,5 +45,3 @@ npm run build
 ```
 
 * O arquivo `vite.config.js` não esta configurado para [Multi-Page App](https://vitejs.dev/guide/build.html#multi-page-app), portanto este comando não irá compilar corretamente para o diretório `/dist/`. 
-
-
