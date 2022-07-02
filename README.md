@@ -1,4 +1,4 @@
-# Desafio `InPeace`(https://inpeaceapp.com/) >>> Front-end
+# Desafio [InPeace](https://inpeaceapp.com/) >>> Front-end
 
 
 ## Como rodar o projeto
