@@ -24,14 +24,14 @@ Para desenvolvimento do desafios, foram utilizadas as seguintes tecnologias:
 
 # Como rodar o projeto
 
-Siga os comandos para visualiar o projeto
+Siga os comandos para visualizar o projeto
 ## Instale as dependencias:
 
 ```sh
 npm install
 ```
 
-## Compile e abra em modo de desenvolvimento:
+## Compile e abra em modo de desenvolvimento (localhost):
 
 ```sh
 npm run dev
